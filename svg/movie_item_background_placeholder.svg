@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="192px" viewBox="0 0 128 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>movie_item_background_placeholder</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,0 L128,0 L128,192 L0,192 L0,0 Z M76,80 L80,88 L74,88 L70,80 L66,80 L70,88 L64,88 L60,80 L56,80 L60,88 L54,88 L50,80 L48,80 C45.79,80 44.02,81.79 44.02,84 L44,108 C44,110.209999 45.79,112 48,112 L80,112 C82.21,112 84,110.209999 84,108 L84,80 L76,80 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="movie_item_background_placeholder">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Combined-Shape" fill="#464646" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
