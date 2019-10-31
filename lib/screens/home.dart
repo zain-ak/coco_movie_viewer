@@ -1,6 +1,5 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
-const String apiKey = 'eecdd7e4d2f0d8a98f7b97e561b0eb1c';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -10,8 +9,18 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return null;
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Coco Movies'),
+        
+      ),
+      body: SafeArea(
+        child: GridView(
+          gridDelegate: null,
+          
+        ),
+      ),
+    );
   }
 
 }
