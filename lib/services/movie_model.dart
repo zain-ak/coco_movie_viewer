@@ -12,12 +12,21 @@ class MovieModel {
 //        .get(Constant.baseURL+'discover/movie?sort_by=popularity.desc')
 //        .then((r) => jsonFromAPI(r.body));
 
+  _movies = await http
+      .get(Constant.baseURL+'discover/movie?api_key='+
+           Constant.apiKey+'&language=en-US&sort_by=popularity.desc'+
+           '&include_adult=false&include_video=false&page=1')
+      .then((r) => jsonFromAPI(r.body));
+
+  for (int i = 0; i < _movies.length; i++) {
+    print('${_movies[i].name}');
+  }
 
   }
 
   List<Movie> jsonFromAPI(String json) {
-    return (jsonDecode(json) as List)
-        //.map((e) => Movie.fromJSON(e)) TODO: code the Movie class
+    return (jsonDecode(json)['results'] as List)
+        .map((e) => Movie.fromJSON(e))
         .toList();
   }
 }
