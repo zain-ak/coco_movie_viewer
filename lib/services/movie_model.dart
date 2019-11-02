@@ -18,9 +18,9 @@ class MovieModel {
            '&include_adult=false&include_video=false&page=1')
       .then((r) => jsonFromAPI(r.body));
 
-  for (int i = 0; i < _movies.length; i++) {
-    print('${_movies[i].name}');
-  }
+//  for (int i = 0; i < _movies.length; i++) {
+//    print('${_movies[i].name}');
+//  }
 
   }
 
