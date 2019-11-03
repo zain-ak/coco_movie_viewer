@@ -30,7 +30,6 @@ class _HomeScreenState extends State<HomeScreen> {
   void _onTab (int value) {
     setState(() {
       _currentTab = value;
-
     });
   }
 

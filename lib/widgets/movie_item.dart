@@ -12,7 +12,8 @@ class MovieItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridTile(
       child: CachedNetworkImage(
-        imageUrl: Constant.ImageBaseURL+movie.posterImageURL
+        imageUrl: Constant.ImageBaseURL+movie.posterImageURL,
+        fit: BoxFit.cover
       ),
       footer: Text(movie.name)
     );

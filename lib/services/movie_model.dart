@@ -11,17 +11,30 @@ class MovieModel extends ChangeNotifier {
 
   UnmodifiableListView<Movie> get movies => UnmodifiableListView(_movies);
 
-  Future<void> getPopularMovies({@required int page}) async {
-  _movies = await http
-      .get(Constant.baseURL+'discover/movie?api_key='+
-           Constant.apiKey+'&language=en-US&sort_by=popularity.desc'+
-           '&include_adult=false&include_video=false&page=$page')
-      .then((r) => jsonFromAPI(r.body));
-  notifyListeners();
-//  for (int i = 0; i < _movies.length; i++) {
-//    print('${_movies[i].name}');
-//  } test loop
+  MovieModel() {
+    getPopularMovies(page: 1);
+    getPopularMovies(page: 2);
+  }
 
+  Future<void> getPopularMovies({@required int page}) async {
+    if (page == 1) {
+      _movies = await http
+          .get(Constant.baseURL + 'discover/movie?api_key=' +
+          Constant.apiKey + '&language=en-US&sort_by=popularity.desc' +
+          '&include_adult=false&include_video=false&page=$page')
+          .then((r) => jsonFromAPI(r.body));
+      notifyListeners();
+    }
+    else {
+      _movies += await http
+          .get(Constant.baseURL + 'discover/movie?api_key=' +
+          Constant.apiKey + '&language=en-US&sort_by=popularity.desc' +
+          '&include_adult=false&include_video=false&page=$page')
+          .then((r) => jsonFromAPI(r.body));
+      notifyListeners();
+    }
+
+  print(_movies.length);
   }
 
   List<Movie> jsonFromAPI(String json) {

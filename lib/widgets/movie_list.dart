@@ -10,6 +10,7 @@ class MovieList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
+      childAspectRatio: 3/4,
       mainAxisSpacing: 1.0,
       crossAxisSpacing: 1.0,
       crossAxisCount: 3,
