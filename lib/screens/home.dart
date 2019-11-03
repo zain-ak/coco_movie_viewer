@@ -2,11 +2,8 @@ import 'package:coco_movie_viewer/tabs/favorites.dart';
 import 'package:coco_movie_viewer/tabs/movies.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:rect_getter/rect_getter.dart';
 
 class HomeScreen extends StatefulWidget {
-
-
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -61,13 +58,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           )
         ),
-
-//      body: SafeArea(
-//        child: GridView(
-//          gridDelegate: null,
-//
-//        ),
-//      ),
     );
   }
 

@@ -1,7 +1,4 @@
-import 'dart:convert';
 import 'dart:core';
-import 'dart:core';
-import 'package:flutter/foundation.dart';
 
 final String columnID = 'id';
 final String movieTitle = 'title';
@@ -37,4 +34,5 @@ class Movie {
     releaseDate = json['release_date'];
     rating = json['vote_average'].toString();
   }
+
 }
