@@ -35,4 +35,6 @@ class Movie {
     rating = json['vote_average'].toString();
   }
 
+  toggleFav() => fav = !fav;
+
 }

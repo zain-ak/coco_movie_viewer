@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: _tabs[_currentTab],
         ),
         bottomNavigationBar: Padding(
-          padding: EdgeInsets.only(bottom: 12.0),
+          padding: EdgeInsets.only(bottom: 4.0),
           child: Stack(
             children: <Widget>[
               BottomNavigationBar(
@@ -53,6 +53,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 currentIndex: _currentTab,
                 items: bottomBarModels,
                 onTap: _onTab,
+              ),
+              AnimatedPositioned(
+                duration: Duration(milliseconds: 250),
+                left: _currentTab == 0 ? 99 : 303,
+                bottom: 10,
+                child: Container(
+                  width: 8,
+                  height: 8,
+                  decoration: BoxDecoration(
+                    color: Colors.orange[300],
+                    shape: BoxShape.circle
+                  ),
+                )
               )
             ],
           )

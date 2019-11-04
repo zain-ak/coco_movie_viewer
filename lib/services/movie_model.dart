@@ -25,16 +25,15 @@ class MovieModel extends ChangeNotifier {
           .then((r) => jsonFromAPI(r.body));
       notifyListeners();
     }
-    else {
-      _movies += await http
-          .get(Constant.baseURL + 'discover/movie?api_key=' +
-          Constant.apiKey + '&language=en-US&sort_by=popularity.desc' +
-          '&include_adult=false&include_video=false&page=$page')
-          .then((r) => jsonFromAPI(r.body));
-      notifyListeners();
-    }
-
   print(_movies.length);
+  }
+
+  Future<String> getTrailerID ({@required String movieName}) async {
+    return await http
+            .get('https://www.googleapis.com/youtube/v3/search'
+        '?part=snippet&q=$movieName%20trailer&type=video?maxResults=5&order=viewCount&key=${Constant.ytApiKey}')
+        .then((r) => r.body);
+
   }
 
   List<Movie> jsonFromAPI(String json) {

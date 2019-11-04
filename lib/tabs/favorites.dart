@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Favorites extends Widget {
+class Favorites extends StatelessWidget {
   @override
-  Element createElement() {
-    // TODO: implement createElement
-    return null;
+  Widget build(BuildContext context) {
+    return Scaffold(
+
+    );
   }
 
 }

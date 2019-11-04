@@ -28,6 +28,8 @@ dependencies:
   rect_getter: ^0.0.1
   provider: ^3.1.0
   cached_network_image: ^1.1.1
+  date_format: ^1.0.8
+  youtube_player_flutter: ^6.0.0
 
 
 dev_dependencies:

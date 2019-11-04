@@ -19,11 +19,26 @@ class MovieItem extends StatelessWidget {
         ));
       },
       child: GridTile(
+        header: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Icon(Icons.favorite_border, color: Colors.red[900]),
+            Row(children: <Widget>[Padding(
+              padding: const EdgeInsets.only(left: 3.0),
+              child: Icon(Icons.star, color: Colors.amber),
+            ), SizedBox(width: 10.0,), Text(movie.rating), SizedBox(width: 3.0)]),
+          ],
+        ),
         child: CachedNetworkImage(
           imageUrl: Constant.ImageBaseURL+movie.posterImageURL,
+          colorBlendMode: BlendMode.srcOver,
+          color: Colors.black.withOpacity(0.3),
           fit: BoxFit.cover
         ),
-        footer: Text(movie.name)
+        footer: Padding(
+          padding: const EdgeInsets.only(left: 2.0, right: 2.0),
+          child: Text(movie.name, style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500)),
+        )
       ),
     );
   }
