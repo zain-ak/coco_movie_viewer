@@ -4,7 +4,7 @@
 
 ### Intro
 
-This is my first standalone project on Flutter that I worked on as part of a *tech jam*, I haven't completed it yet but the UI has mostly been implemented. I will complete this project sometime in the future, it was mostly a learning experience to apply the skills that I learned from taking a course on Flutter over the course of two months. 123
+This is my first standalone project on Flutter that I worked on as part of a *tech jam*, I haven't completed it yet but the UI has mostly been implemented. I will complete this project sometime in the future, it was mostly a learning experience to apply the skills that I learned from taking a course on Flutter over the course of two months.
 
 While the UI looks good, the app doesn't have much functionality as yet. Features that I'll be looking to implement on the application in the future:
 - Caching using SharedPreferences or SQLite
