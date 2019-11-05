@@ -97,8 +97,10 @@ class _YouTubeWindow extends State<YouTubeWindow> {
   }
 
   void getID() async {
+//    mm.getTrailerID(movieName: name);
     String data = await mm.getTrailerID(movieName: name);
-    //id = data['items'][0][0]['id'];
+    print(data);
+//    id = data['items'][0][0]['id'];
   }
 
   @override

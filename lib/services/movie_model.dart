@@ -29,11 +29,11 @@ class MovieModel extends ChangeNotifier {
   }
 
   Future<String> getTrailerID ({@required String movieName}) async {
-    return await http
+    http.Response response = await http
             .get('https://www.googleapis.com/youtube/v3/search'
-        '?part=snippet&q=$movieName%20trailer&type=video?maxResults=5&order=viewCount&key=${Constant.ytApiKey}')
-        .then((r) => r.body);
+        '?part=snippet&q=$movieName%20trailer&type=video?maxResults=5&order=viewCount&key=${Constant.ytApiKey}');
 
+     return (jsonDecode(response.body));
   }
 
   List<Movie> jsonFromAPI(String json) {
